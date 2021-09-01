@@ -53,10 +53,33 @@ body {
 	background-color: grey;
 }
 
+.topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background-color: yellow;
+	border-bottom: 5px solid black;
+	z-index: 9999;
+}
+
 .container {
-	width: 800px;
-	margin: auto;
+	width: 900px;
+	margin: 80px auto;
 	background-color: white;
+	position: relative;
+}
+.twitter {
+	width: 200px;
+	height: 200px;
+	background-image: url(img/ribbon.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+	position: absolute;
+	top: -22px;
+	right: -28px;
 }
 .header	{
 	padding:20px;
@@ -89,38 +112,75 @@ body {
 	height: 320px;
 	background-image: url(M1.png);
 	background-size: 750px;
-	background-position: 25px 0px;
+	background-position: center;
 	border-top: 5px solid grey;
 	border-bottom: 5px solid grey;
+	background-repeat: no-repeat;
 }
 
-.content {
+.main {
+	width: 600px;
 	padding: 10px;
+	box-sizing: border-box;
+	float: left;
 }
 
-.content h2 {
+.main h2 {
 	font-size: 20px;
 	font-weight: bold;
 }
 
-.content .penulis {
+.main .penulis {
 	font-size: 12px;
 	margin-top: 0px;
 }
 
-.content .penulis a {
+.main .penulis a {
 	color: red;
 	text-decoration: none;
 }
 
-.content p {
+.main p {
 	margin-bottom: 15px;
 	font-size: 14px;
 }
 
+.sidebar {
+	width: 300px;
+	float: right;
+}
+.sidebar h3 {
+	font-weight: bold;
+}
+.sidebar img {
+	width: 70px;
+	height: 90px;
+	float: left;
+	padding-right:10px;
+}
+.sidebar p {
+	font: 12px/19px century;
+}
+
 .footer {
-	padding: 5px;
+	padding: 10px;
 	background-color: black;
 	color: white;
 	text-align: center;
+}
+
+
+/*clear fix*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
